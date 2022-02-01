@@ -34,7 +34,7 @@
         Employee Details
         <div class="emp-count">10</div>
     </div>
-      <a href="../pages/payroll_form.html" class="add-button">
+      <a href="../Pages/PayrollForm.html" class="add-button">
         <img src="../assets/icons/add-24px.svg" alt="" style="width: 14%;">Add User
       </a>
 </div>
@@ -69,6 +69,39 @@
     </table>
   </div>
 </div>
+<!----UC4 Display Employee Details in Tabular format using Template Literals-->
+
+const createInnerHtml = () => {
+
+    const headerHtml =
+        `<tr>
+            <th>Profile</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Start Date</th>
+            <th>Actions</th>
+        </tr>`;
+    
+    const innerHtml = `${headerHtml}
+        <tr>
+            <td><img class="profile" src="../Assets/profile-images/Ellipse -3.png" alt="Ellipse-3"></td>
+            <td>Anusha Nallapu</td>
+            <td>Male</td>
+            <td>
+            <div class="dept-label">Sales</div>
+            <div class="dept-label">Finance</div>
+            </td>
+            <td>&#8377; 3000000</td>
+            <td>16 Oct 2021</td>
+            <td>
+            <img src="../assets/icons/delete-black-18dp.svg" alt="delete" id="1" onclick="remove(this)">
+            <img src="../assets/icons/create-black-18dp.svg" alt="edit" id="1" onclick="update(this)">
+            </td>
+        </tr>`;
+    document.querySelector('#table-display').innerHTML = innerHtml;
+    }
 </body>
 
 </html>
