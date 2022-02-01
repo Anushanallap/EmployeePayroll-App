@@ -1,7 +1,7 @@
 /****UC1******/
 
 
-class PayrollForm {
+class EmployeePayrollData {
 
     get id() {
         return this._id;
@@ -123,7 +123,7 @@ window.addEventListener('DOMContentLoaded',(event) => {
     });
 });
 
-/******UC3 & UC4*********/
+/******UC3 on save create employee payroll object & UC4 saving employee payroll to local storage *********/
 
 const save = () => {
     try {
@@ -162,7 +162,7 @@ const createEmployeePayroll = () => {
     employeePayrollData.note = getInputValueById('#notes');
 
     let date = getInputValueById('#day')+" "+getInputValueById('#month')+" "+getInputValueById('#year');
-    employeePayrollData.date = Date.parse(date);
+                employeePayrollData.date = Date.parse(date);
     alert(employeePayrollData.toString());
     return employeePayrollData;
 }
@@ -186,7 +186,7 @@ const getInputElementValue = (id) => {
 }
 
 
-/*********UC5********/
+/*********UC5 ability to reset the form on clicking reset********/
 
 const resetForm = () => {
     setValue('#name','');
