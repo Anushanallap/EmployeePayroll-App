@@ -69,39 +69,14 @@
     </table>
   </div>
 </div>
-<!----UC4 Display Employee Details in Tabular format using Template Literals-->
+<!----UC4 &UC5 Display Employee Details in Tabular format using Template Literals-->
+<div class="table-main">
+    <table id="table-display" class="table"></table>
+  </div>
+</div>
+<script src="../js/home.js"></script>
+<script src="../js/site-properties.js"></script>
 
-const createInnerHtml = () => {
-
-    const headerHtml =
-        `<tr>
-            <th>Profile</th>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Department</th>
-            <th>Salary</th>
-            <th>Start Date</th>
-            <th>Actions</th>
-        </tr>`;
-    
-    const innerHtml = `${headerHtml}
-        <tr>
-            <td><img class="profile" src="../Assets/profile-images/Ellipse -3.png" alt="Ellipse-3"></td>
-            <td>Anusha Nallapu</td>
-            <td>Male</td>
-            <td>
-            <div class="dept-label">Sales</div>
-            <div class="dept-label">Finance</div>
-            </td>
-            <td>&#8377; 3000000</td>
-            <td>16 Oct 2021</td>
-            <td>
-            <img src="../assets/icons/delete-black-18dp.svg" alt="delete" id="1" onclick="remove(this)">
-            <img src="../assets/icons/create-black-18dp.svg" alt="edit" id="1" onclick="update(this)">
-            </td>
-        </tr>`;
-    document.querySelector('#table-display').innerHTML = innerHtml;
-    }
 </body>
 
 </html>
